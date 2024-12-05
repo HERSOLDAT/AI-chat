@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open Iframe in Borderless Window</title>
+    <title>Open Iframe in Fullscreen</title>
     <style>
         .container {
             border: 2px solid #000;
@@ -23,17 +23,18 @@
         function openIframe() {
             var url = "https://copilotstudio.microsoft.com/environments/Default-1b6bba49-6f35-4d82-9fca-4827d417cd3e/bots/crc1e_test/webchat?__version__=2";
             var newWindow = window.open(url, 'newwindow', 'width=800,height=600,toolbar=no,location=no,menubar=no,scrollbars=no,resizable=no,status=no');
-            newWindow.document.body.style.margin = "0";
-            newWindow.document.body.style.padding = "0";
-            newWindow.document.body.style.overflow = "hidden";
-            newWindow.document.documentElement.requestFullscreen();
+            if (newWindow) {
+                newWindow.addEventListener('load', function() {
+                    newWindow.document.documentElement.requestFullscreen();
+                });
+            }
         }
     </script>
 </head>
 <body>
     <div class="container">
         <h1>Chatbot Dialog</h1>
-        <button onclick="openIframe()">Open Chatbot in Borderless Window</button>
+        <button onclick="openIframe()">Open Chatbot in Fullscreen Window</button>
     </div>
 </body>
 </html>
