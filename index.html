@@ -28,7 +28,7 @@
         }
         .side-container iframe {
             width: 100%;
-            height: max-content;
+            height: 80%;
             border: none;
         }
         button {
@@ -68,12 +68,13 @@
                 mainContent.classList.remove('open');
                 isOpen = false;
             } else {
-                sideContainer.style.length = "max-content";
+                
                 sideContainer.style.width = "30%";
                 button.textContent = "Lukk Højre Side";
                 mainContent.classList.add('open');
                
                 // Tjek, om en iframe allerede er tilføjet
+                
                 if (!sideContainer.querySelector('iframe')) {
                     const iframe = document.createElement('iframe');
                     iframe.src = "https://copilotstudio.microsoft.com/environments/Default-1b6bba49-6f35-4d82-9fca-4827d417cd3e/bots/crc1e_test/webchat?__version__=2";
