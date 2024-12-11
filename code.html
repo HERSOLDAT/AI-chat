@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website AI Chat for koder </title>
     <style>
-        * {
-            background-color: wheat;
+        header{
+            background-color: grey;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: center; /* Center the nav links */
         }
         body {
             display: flex;
@@ -14,6 +18,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
             height: 100vh; /* Set to viewport height */
+            background-color: dimgray;
         }
         nav {
             background-color: #333;
@@ -32,7 +37,7 @@
             margin-right: 50px;
         }
         nav ul li a {
-            color: black;
+            color: white;
             text-decoration: none;
         }
         .main-content {
@@ -72,6 +77,10 @@
             right: calc(30% + 10px); /* Adjust position when side-container is open */
         }
     </style>
+    </style>
+    <header>
+        <h1>IKT hjelp</h1>
+    </header>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -79,7 +88,6 @@
         <ul>
             <li><a href="index.html">IKT og Kode hjelp </a></li>
             <li><a href="code.html">Kode hjelp</a></li>
-            <li><a href="Lillehammerskolejhelp.html">lillehammer Skole Hjelp</a></li>
         </ul>
     </nav>
 
@@ -91,7 +99,7 @@
 
     <!-- Side Container -->
     <div class="side-container" id="sideContainer">
-        <iframe src="https://copilotstudio.microsoft.com/environments/Default-1b6bba49-6f35-4d82-9fca-4827d417cd3e/bots/crc1e_test/webchat?__version__=2"></iframe>
+        <iframe src="https://copilotstudio.microsoft.com/environments/Default-1b6bba49-6f35-4d82-9fca-4827d417cd3e/bots/crc1e_kodeHjelperAi/webchat?__version__=2"></iframe>
     </div>
 
     <script>
@@ -110,7 +118,7 @@
                 // Ensure the iframe is added when the container opens
                 if (!sideContainer.querySelector('iframe')) {
                     const iframe = document.createElement('iframe');
-                    iframe.src = "https://copilotstudio.microsoft.com/environments/Default-1b6bba49-6f35-4d82-9fca-4827d417cd3e/bots/crc1e_test/webchat?__version__=2";
+                    iframe.src = "https://copilotstudio.microsoft.com/environments/Default-1b6bba49-6f35-4d82-9fca-4827d417cd3e/bots/crc1e_kodeHjelperAi/webchat?__version__=2";
                     sideContainer.appendChild(iframe);
                 }
             }
